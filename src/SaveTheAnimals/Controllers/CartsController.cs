@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
 using SaveTheAnimals.Infrastructure;
 
-namespace EndangeredSpecies.Controllers
+namespace SaveTheAnimals.Controllers
 {
     public class CartsController : Controller
     {

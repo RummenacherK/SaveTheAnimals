@@ -15,7 +15,7 @@ using SaveTheAnimals.Services;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Http;
 
-namespace EndangeredSpecies
+namespace SaveTheAnimals
 {
     public class Startup
     {

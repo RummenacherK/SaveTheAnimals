@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SaveTheAnimals</title>
+    <title>@ViewData["Title"] - EndangeredSpecies</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,13 +26,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">SaveTheAnimals</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">EndangeredSpecies</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Species" asp-action="Index">Species</a></li>
+                    <li><a asp-area="" asp-controller="Carts" asp-action="Index" asp-route-type="donation">Donations</a></li>
+                    @if (User.Identity.IsAuthenticated == true && User.IsInRole("Admin"))
+                    {
+                        <li><a asp-area="" asp-controller="ManageRoles" asp-action="Index">Manage Roles</a></li>
+                        <li><a asp-area="" asp-controller="ManageUsers" asp-action="Index">Manage Users</a></li>
+                    }
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -42,7 +49,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - SaveTheAnimals</p>
+            <p>&copy; 2017 - EndangeredSpecies</p>
         </footer>
     </div>
 

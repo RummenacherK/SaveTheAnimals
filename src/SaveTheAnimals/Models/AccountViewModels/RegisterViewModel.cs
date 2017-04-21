@@ -8,6 +8,12 @@ namespace SaveTheAnimals.Models.AccountViewModels
 {
     public class RegisterViewModel
     {
+        [Display(Name = "First Name")]
+        public string fName { get; set; }
+
+        [Display(Name = "Last Name")]
+        public string lName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
